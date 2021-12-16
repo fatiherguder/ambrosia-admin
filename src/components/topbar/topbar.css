@@ -1,0 +1,37 @@
+.topbar-area{
+    width: 100vw;
+    height: 8vh;
+    background-color: #457b9d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area{
+    width: 20vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 8vh;
+    width: 8vh;
+}
+
+.title{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.icon-area{
+    margin-right: 50px;
+}
+
+.logout{
+    color: whitesmoke;
+}
