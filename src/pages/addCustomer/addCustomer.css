@@ -1,11 +1,12 @@
 .a{
     width: 80vw;
-    padding-top: 20vh;
+    padding-top: 50px;
 }
 
 form {
     background: white;
-    border: 1px solid #dedede;
+    -webkit-box-shadow: 5px 5px 15px 5px rgb(180, 180, 180); 
+    box-shadow: 5px 5px 15px 5px #b4b4b4;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

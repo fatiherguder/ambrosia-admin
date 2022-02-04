@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './addCustomer.css'
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, addDoc, collection} from "firebase/firestore";
+import { getFirestore, addDoc, collection, setDoc, doc} from "firebase/firestore";
 import { Alert } from 'react-bootstrap';
 
 const firebaseConfig = {
@@ -31,13 +31,16 @@ export const AddCustomer = () => {
         event.preventDefault();
         createUserWithEmailAndPassword(auth, mail, pass)
         .then(() => {
-            addDoc(collection(db, "users"), {
+            const userRef = doc(db, 'users', auth.currentUser.uid);
+            setDoc(userRef,{
                 email: mail,
                 name: name,
                 pass: pass,
+                adress: adress,
+                phone:phone,
                 markets: ["2WBgM5IxBtu4feMvPCvN"],
                 id: auth.currentUser.uid
-              });
+            })
               setShow(true);
         })
     }
