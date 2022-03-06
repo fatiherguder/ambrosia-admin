@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './addCustomer.css'
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, addDoc, collection, setDoc, doc} from "firebase/firestore";
+import { getFirestore, setDoc, doc} from "firebase/firestore";
 import { Alert } from 'react-bootstrap';
 
 const firebaseConfig = {
